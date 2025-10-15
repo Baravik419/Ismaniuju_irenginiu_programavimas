@@ -1,0 +1,7 @@
+adb devices
+telnet localhost 5554
+auth ZQuaBfV2lzMS0dDC
+sms send +37060000000 "Sveikas, čia testinė žinutė!"
+gsm call +37060000000
+power capacity 10
+
