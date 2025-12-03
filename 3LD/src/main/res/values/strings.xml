@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">3LD</string>
+
+    <string-array name="padaliniai">
+        <item>Antano Gustaičio aviacijos institutas</item>
+        <item>Aplinkos inžinerijos fakultetas</item>
+        <item>Architektūros fakultetas</item>
+        <item>Elektronikos fakultetas</item>
+        <item>Fundamentinių mokslų fakultetas</item>
+        <item>Kūrybinių industrijų fakultetas</item>
+        <item>Lietuvos jūreivystės akademija</item>
+        <item>Mechanikos fakultetas</item>
+        <item>Statybos fakultetas</item>
+        <item>Transporto inžinerijos fakultetas</item>
+        <item>Verslo vadybos fakultetas</item>
+    </string-array>
+
+    <string-array name="miestai">
+        <item>Vilnius</item>
+        <item>Kaunas</item>
+        <item>Klaipėda</item>
+        <item>Šiauliai</item>
+        <item>Panevėžys</item>
+    </string-array>
+
+    <string name="pavadinimas">Pavadinimas:</string>
+    <string name="pav_hint">Įveskite vardą ir pavardę</string>
+    <string name="padalinys">Padalinys:</string>
+    <string name="pad_hint">Pasirinkite padalinį iš sąrašo</string>
+    <string name="sudetingumas">Sudėtingumas:</string>
+    <string name="laikas">Laikas:</string>
+    <string name="data">Data:</string>
+    <string name="miestas">Pasirinkite miestą:</string>
+    <string name="registruoti">Registruoti</string>
+    <string name="saugoti">Saugoti</string>
 </resources>
