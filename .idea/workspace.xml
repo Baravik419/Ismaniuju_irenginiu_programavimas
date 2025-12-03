@@ -59,78 +59,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3532bc4-b106-410c-8911-fd5b112b2700" name="Changes" comment="Starting with 2LD">
-      <change afterPath="$PROJECT_DIR$/2LD/src/main/java/com/example/a2ld/SecondActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LD/src/main/java/com/example/a2ld/ThirdActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LD/src/main/res/drawable/rounded_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LD/src/main/res/layout/activity_second.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LD/src/main/res/layout/activity_third.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/androidTest/java/com/example/a2ldv0_2/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/java/com/example/a2ldv0_2/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/java/com/example/a2ldv0_2/MainActivity2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/java/com/example/a2ldv0_2/MainActivity3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/drawable/rounded_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/layout/activity_main2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/layout/activity_main3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2LDv0_2/src/test/java/com/example/a2ldv0_2/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/androidTest/java/com/example/a3ld/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/java/com/example/a3ld/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3LD/src/test/java/com/example/a3ld/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="d3532bc4-b106-410c-8911-fd5b112b2700" name="Changes" comment="Checked whether android studio works on macbook">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2LD/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/2LD/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2LD/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2LD/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2LD/src/main/java/com/example/a2ld/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/2LD/src/main/java/com/example/a2ld/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3LD/src/main/java/com/example/a3ld/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/3LD/src/main/java/com/example/a3ld/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3LD/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/3LD/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3LD/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/3LD/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +103,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -194,6 +133,9 @@
   }
 }</component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\erwin\.gradle\wrapper\dists\gradle-9.1.0-bin\9agqghryom9wkf8r80qlhnts3\gradle-9.1.0" javaHome="C:\Users\erwin\.jdks\openjdk-25" gradleVersion="9.1.0" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Google/AndroidStudio2025.2.1/device-explorer/Pixel 5/_/data/user/0/com.example.a3ld/files/ErvinBorkovski.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -212,6 +154,7 @@
   "keyToString": {
     "Android App.2ld.executor": "Run",
     "Android App.2ldv0_2.executor": "Run",
+    "Android App.3ld.executor": "Run",
     "Android App.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
@@ -222,7 +165,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/erwin/StudioProjects/Ismaniuju_irenginiu_programavimas/2ldv0_2/src/main/res/drawable",
@@ -251,7 +194,7 @@
       <recent name="com.example.a2ld" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.2ldv0_2">
+  <component name="RunManager" selected="Android App.3ld">
     <configuration name="2ld" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="1_LD.2ld" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -570,7 +513,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1762605470476</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Checked whether android studio works on macbook">
+      <option name="closed" value="true" />
+      <created>1764699056835</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1764699056835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -578,7 +528,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -588,7 +550,8 @@
     <MESSAGE value="Fixed Gradle issue, successful app launch, 1LD finished" />
     <MESSAGE value="Some uncommited files" />
     <MESSAGE value="Starting with 2LD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting with 2LD" />
+    <MESSAGE value="Checked whether android studio works on macbook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checked whether android studio works on macbook" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
@@ -615,22 +578,22 @@
         </entry>
         <entry key="com.example.a2ldv0_2">
           <value>
-            <CheckInfo lastCheckTimestamp="1764692213502" />
+            <CheckInfo lastCheckTimestamp="1764788247575" />
           </value>
         </entry>
         <entry key="com.example.a2ldv0_2.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1764692213503" />
+            <CheckInfo lastCheckTimestamp="1764788247574" />
           </value>
         </entry>
         <entry key="com.example.a3ld">
           <value>
-            <CheckInfo lastCheckTimestamp="1764182638646" />
+            <CheckInfo lastCheckTimestamp="1764795444066" />
           </value>
         </entry>
         <entry key="com.example.a3ld.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1764182638681" />
+            <CheckInfo lastCheckTimestamp="1764795444068" />
           </value>
         </entry>
       </map>
