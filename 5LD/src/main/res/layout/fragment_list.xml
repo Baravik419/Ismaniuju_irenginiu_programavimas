@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".ListFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView_fragmentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/fragmentList"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/listView_fragmentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/fragmentListEntries2" />
+</LinearLayout>
