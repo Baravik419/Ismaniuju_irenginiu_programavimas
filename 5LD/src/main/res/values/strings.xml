@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">5LD</string>
+    <string name="fragmentList">Fragmentų pavyzdžiai</string>
+    <string name="fragmentWithA">With a fragment</string>
+    <string name="fragmentWithoutA">Without a fragment</string>
+
+    <string-array name="fragmentListEntries1">
+        <item>Alfa</item>
+        <item>Betė</item>
+        <item>Gama</item>
+        <item>Test</item>
+        <item>Kodas</item>
+        <item>Programavimas</item>
+        <item>Architektūra</item>
+
+    </string-array>
+
+    <string-array name="fragmentListEntries2">
+        <item>Alytus</item>
+        <item>VILNIUS</item>
+        <item>Kaunas</item>
+        <item>NERIS</item>
+        <item>NEMENČINĖ</item>
+    </string-array>
+</resources>
