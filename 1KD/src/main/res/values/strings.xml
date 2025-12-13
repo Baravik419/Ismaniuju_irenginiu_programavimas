@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">1KD</string>
+    <string name="fragmentList">Meniu pasirinkimas</string>
+    <string name="fragmentListName">Meniu pasirinkimas</string>
+
+    <string-array name="fragmentListEntries">
+        <item>Pica</item>
+        <item>Burgeris</item>
+        <item>Sriuba</item>
+        <item>Saslykas</item>
+        <item>Kebabas</item>
+        <item>Koldunai</item>
+        <item>Bulvytes fri</item>
+        <item>Gerimai</item>
+    </string-array>
+</resources>

@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         String[] miestai = getResources().getStringArray(R.array.miestai);
 
-        ArrayAdapter<String> adapter_miestai = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, miestai);
-        spinner.setAdapter(adapter_miestai);
+        /// ArrayAdapter<String> adapter_miestai = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, miestai);
+        /// spinner.setAdapter(adapter_miestai);
 
 
         button.setOnClickListener(new View.OnClickListener(){

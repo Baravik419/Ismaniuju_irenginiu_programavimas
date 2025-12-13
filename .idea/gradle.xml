@@ -10,12 +10,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/1KD" />
             <option value="$PROJECT_DIR$/1LD/app" />
             <option value="$PROJECT_DIR$/2ldv0_2" />
             <option value="$PROJECT_DIR$/3ld" />
             <option value="$PROJECT_DIR$/4LD" />
             <option value="$PROJECT_DIR$/5LD" />
             <option value="$PROJECT_DIR$/6LD" />
+            <option value="$PROJECT_DIR$/7LD" />
           </set>
         </option>
       </GradleProjectSettings>
