@@ -2,67 +2,94 @@ package com.example.a7ld;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.BatteryManager;
 import android.os.Build;
-import android.util.Log;
-import android.widget.TextView;
-import static androidx.core.content.ContextCompat.getSystemService;
 
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-
 public class MyReceiver extends BroadcastReceiver {
 
-    private static final String CHANNEL_ID = "Chanel1";
-    String result, textTitle, textContent;
-    TextView textView;
-    Context context;
-    int counter = 0;
-
-    MyReceiver(Context context, TextView textView) {
-        this.context = context;
-        this.textView = textView;
-    }
+    private static final int LOW_THRESHOLD = 15;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        counter++;
 
-        createNotificationChannel();
-        result = intent.getStringExtra("pranesimas");
-        Log.d("EB", "onReceive() veikia, pranesimas = " + result);
-        textView.setText(result);
+        SharedPreferences prefs =
+                context.getSharedPreferences("ld7", Context.MODE_PRIVATE);
 
-        String action = intent.getAction();
-        if (Intent.ACTION_BATTERY_CHANGED.equals(action)) {
-            boolean isBatteryChanged = intent.getBooleanExtra("state", false);
-            result = "Baterijos lygis pasikeite";
+        boolean enabled = prefs.getBoolean("enabled", false);
+        if (!enabled) return;
+
+        int lastPercent = prefs.getInt("last_percent", -1);
+        boolean lowNotified = prefs.getBoolean("low_notified", false);
+
+        int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+        int percent = (scale > 0) ? (level * 100 / scale) : -1;
+
+        if (percent == lastPercent) return;
+
+        createChannel(context);
+
+        Intent openApp = new Intent(context, MainActivity.class);
+        openApp.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        PendingIntent pi = PendingIntent.getActivity(
+                context,
+                0,
+                openApp,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+        );
+
+        if (percent <= LOW_THRESHOLD && !lowNotified) {
+            NotificationCompat.Builder lowBuilder =
+                    new NotificationCompat.Builder(context, "battery_channel")
+                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setContentTitle("Žemas baterijos lygis")
+                            .setContentText("Baterija nukrito iki " + percent + "%")
+                            .setAutoCancel(true)
+                            .setContentIntent(pi);
+
+            NotificationManagerCompat.from(context).notify(100, lowBuilder.build());
+            prefs.edit().putBoolean("low_notified", true).apply();
         }
 
-        textTitle = "Mano pranesimas";
-        textContent = "Pranesimo tekstas: " + result;
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_notification)
-                .setContentTitle(textTitle)
-                .setContentText(textContent)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationCompat.Builder changeBuilder =
+                new NotificationCompat.Builder(context, "battery_channel")
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setContentTitle("Baterijos lygis pasikeitė")
+                        .setContentText("Dabartinis lygis: " + percent + "%")
+                        .setAutoCancel(true)
+                        .setContentIntent(pi);
 
-        NotificationManagerCompat.from(context).notify(255 + counter, builder.build());
+        NotificationManagerCompat.from(context).notify(101, changeBuilder.build());
+
+        if (percent > LOW_THRESHOLD) {
+            prefs.edit().putBoolean("low_notified", false).apply();
+        }
+
+        prefs.edit().putInt("last_percent", percent).apply();
     }
 
-    private void createNotificationChannel() {
+    private void createChannel(Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "Mano pranesimas";
-            String description = "Aprasymas";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
-            channel.setDescription(description);
-            NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
+            NotificationChannel channel =
+                    new NotificationChannel(
+                            "battery_channel",
+                            "Battery channel",
+                            NotificationManager.IMPORTANCE_DEFAULT
+                    );
+
+            NotificationManager manager =
+                    context.getSystemService(NotificationManager.class);
+
+            manager.createNotificationChannel(channel);
         }
     }
 }

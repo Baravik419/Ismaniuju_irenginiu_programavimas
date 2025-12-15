@@ -1,75 +1,97 @@
 package com.example.a7ld;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.view.View;
-import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textView;
-    Button button1, button2;
-    Intent intent1, getIntent1;
-    IntentFilter intentFilter1, intentFilter2;
+    private TextView textView;
+    private Switch swTracking;
+    private Toolbar toolbar;
 
-    MyReceiver receiver1, receiver2;
+    private MyReceiver receiver;
+    private boolean receiverRegistered = false;
+
+    private SharedPreferences prefs;
+    private static final String PREFS = "ld7";
+    private static final String KEY_ENABLED = "enabled";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        toolbar = findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
 
         textView = findViewById(R.id.textView);
-        button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
+        swTracking = findViewById(R.id.swTracking);
 
-        intentFilter1 = new IntentFilter("com.example.a7ld.manoIntentas");
-        intentFilter2 = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        prefs = getSharedPreferences(PREFS, MODE_PRIVATE);
 
-        receiver1 = new MyReceiver(MainActivity.this, textView);
-        registerReceiver(receiver1, intentFilter1, RECEIVER_EXPORTED);
+        requestNotificationPermission();
 
-        receiver2 = new MyReceiver(MainActivity.this, textView);
-        registerReceiver(receiver2, intentFilter2, RECEIVER_EXPORTED);
+        boolean enabled = prefs.getBoolean(KEY_ENABLED, false);
+        swTracking.setChecked(enabled);
+        updateText(enabled);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent1 = new Intent();
-                intent1.setAction("com.example.a7ld.manoIntentas");
-                intent1.putExtra("pranesimas", "Intent1 pranesimas");
-                sendBroadcast(intent1);
-            }
-        });
+        if (enabled) startTracking();
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Settings.ACTION_BATTERY_SAVER_SETTINGS);
+        swTracking.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            prefs.edit().putBoolean(KEY_ENABLED, isChecked).apply();
+            updateText(isChecked);
 
-                if(intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    startActivity(new Intent(Settings.ACTION_SETTINGS));
-                }
-            }
+            if (isChecked) startTracking();
+            else stopTracking();
         });
     }
 
+    private void startTracking() {
+        if (receiver == null) {
+            receiver = new MyReceiver();
+        }
+        if (!receiverRegistered) {
+            registerReceiver(receiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+            receiverRegistered = true;
+        }
+    }
 
+    private void stopTracking() {
+        if (receiverRegistered) {
+            unregisterReceiver(receiver);
+            receiverRegistered = false;
+        }
+    }
+
+    private void updateText(boolean enabled) {
+        textView.setText(enabled ? "Sekimas įjungtas" : "Sekimas išjungtas");
+    }
+
+    private void requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(
+                        new String[]{Manifest.permission.POST_NOTIFICATIONS},
+                        100
+                );
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopTracking();
+    }
 }

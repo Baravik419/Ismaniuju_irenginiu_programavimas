@@ -5,29 +5,41 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sekimas isjungtas"
-        android:textSize="24sp"/>
+        android:background="#3E50B6"
+        app:title="7 LD"
+        app:titleTextColor="@android:color/white"/>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Issiusk"
-        />
+    <!-- TURINYS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lektuvo rezimas"
-        />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sekimas išjungtas"
+            android:textSize="22sp"
+            android:layout_marginBottom="24dp"/>
+
+        <Switch
+            android:id="@+id/swTracking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Įjungti pranešimus"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
