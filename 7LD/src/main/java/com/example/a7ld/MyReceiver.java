@@ -19,6 +19,8 @@ public class MyReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        int i = 0;
+        i = i + 1;
 
         SharedPreferences prefs =
                 context.getSharedPreferences("ld7", Context.MODE_PRIVATE);
@@ -68,7 +70,7 @@ public class MyReceiver extends BroadcastReceiver {
                         .setAutoCancel(true)
                         .setContentIntent(pi);
 
-        NotificationManagerCompat.from(context).notify(101, changeBuilder.build());
+        NotificationManagerCompat.from(context).notify(101 + i, changeBuilder.build());
 
         if (percent > LOW_THRESHOLD) {
             prefs.edit().putBoolean("low_notified", false).apply();

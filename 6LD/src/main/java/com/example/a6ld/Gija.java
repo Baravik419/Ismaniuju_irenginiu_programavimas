@@ -51,12 +51,12 @@ public class Gija extends Thread {
             Log.d("EB", "Gijos rezultatas, i = " + i);
             int finalI = i;
             finalResult = finalResult + result.charAt(finalI);
-            mainActivity.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
+//            mainActivity.runOnUiThread(new Runnable() {
+//                @Override
+//                public void run() {
                     textView.setText(finalResult);
-                }
-            });
+//                }
+//            });
         }
     }
 }
